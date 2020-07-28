@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 /Users/wanghuangjie/code/python/utils/boostoff_battery.py
+python3 ~/code/python/utils/boostoff_battery.py
