@@ -1,2 +1,13 @@
 #!/bin/bash
-python3 ~/code/python/utils/boostoff_battery.py
+# check battery state every time laptop wake up
+
+AC_CONNECTED=$(system_profiler SPPowerDataType | grep "Connected" | awk '{print $2}' )
+
+
+if [ $AC_CONNECTED != "Yes" ]; then
+	echo "Power not connected"
+	cd /Applications/Utilities/voltageshift/;sudo ./voltageshift turbo 0
+	osascript -e 'display notification "Turboboost Disabled!" with title "On Battery"'
+        exit 1;
+
+fi
