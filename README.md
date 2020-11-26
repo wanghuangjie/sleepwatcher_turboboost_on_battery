@@ -8,6 +8,7 @@
 4. ```wget -P ~/code/python/utils/ https://raw.githubusercontent.com/wanghuangjie/sleepwatcher_turboboost_on_battery/master/boostoff_battery.py```
 5. ```wget -P ~ -O .wakeup https://raw.githubusercontent.com/wanghuangjie/sleepwatcher_turboboost_on_battery/master/wakeup```
 6. ```chmod 755 ~/.wakeup```
+7. ```ALL ALL=NOPASSWD:/Applications/Utilities/voltageshift/voltageshift``` sudo visudo 添加这一行
 
 
 睡眠再唤醒，如未接电源，应有关闭turbo_boost的提示。
